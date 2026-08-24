@@ -1,17 +1,21 @@
+m  GNU nano 9.2                 package.json
 {
-  "name": "workspace",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "mister-bot",
+  "version": "1.0.0",
+  "description": "بوت مستر - بوت ماسنجر احترافي لا يتوقف",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot/index.js",
-    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
-    "build": "pnpm run typecheck && pnpm -r --if-present run build",
-    "typecheck:libs": "tsc --build",
-    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
-  "private": true,
-  "devDependencies": {
-    "prettier": "^3.8.3",
-    "typescript": "~5.9.3"
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "canvas": "^3.2.3",
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2",
+    "ws3-fca": "^3.5.2",
+    "yt-search": "^2.13.1",
+    "ytdl-core": "^4.11.5",
+    "ytpl": "^2.3.0"
   }
 }
